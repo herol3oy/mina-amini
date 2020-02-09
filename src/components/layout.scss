@@ -1,0 +1,60 @@
+$font-1: "Montserrat", sans-serif;
+$font-2: "Quicksand", sans-serif;
+$font-3: "Source Code Pro", monospace;
+$font-4: "Roboto Mono", monospace;
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(51,51,51,0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.vita-text-paragraph {
+  font-size: 1rem !important;
+}
+
+.container-fluid {
+  p.vita-text {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+}
+
+ul {
+  list-style: none;
+  font-family: $font-3;
+}
+
+.filter {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+body {
+  background-color: white !important;
+
+  .title {
+    font-family: $font-4;
+    font-size: 2.5rem;
+    color: #212529;
+  }
+
+  .nav-link {
+    font-family: $font-2;
+    color: #21252998;
+  }
+
+  p {
+    font-family: $font-3;
+    line-height: 2rem;
+    font-size: 1.4rem;
+    // margin: 3rem 0;
+  }
+}
+
+.info {
+  margin: 3rem 0;
+  p {
+    margin-top: 0rem;
+    line-height: 1.5;
+  }
+}

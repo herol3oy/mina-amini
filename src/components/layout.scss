@@ -44,10 +44,18 @@ body {
     font-family: $font-2;
     color: rgba(0, 0, 0, 0.3);
     transition: color ease-in-out 0.5s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 
     &:hover {
       color: rgba(0, 0, 0, 0.7);
     }
+  }
+  .nav-link {
+    font-size: 0.8rem;
+  }
+  .nav-item:first-child {
+    margin-right: 1.5rem;
   }
 
   p {

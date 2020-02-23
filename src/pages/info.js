@@ -29,7 +29,7 @@ const Info = () => {
                 </div>
                 <h4 className="col-lg-2 mt-5 font-weight-bold">Vita</h4>
                 <p className="vita-text-paragraph col-lg-12" style={{ WebkitColumnCount: 2, MozColumnCount: 2, columnCount: 2, WebkitColumnWidth: '15rem', MozColumnWidth: '15rem', columnWidth: '15rem' }}>
-                    <span className=" font-weight-bold">1988</span>Geb. in Maschhad, Iran <br />
+                    <span className=" font-weight-bold">1988</span> Geb. in Maschhad, Iran <br />
                     <span className="font-weight-bold">2012-2018</span> Studiert Freie Kunst. Bauhaus-Universität Weimar<br />
                     <span className="font-weight-bold">2009-2012</span> Bachelor. Bildende Kunst und Malerei, Ferdowsi Universität Nyschabur, Iran<br />
                     <span className="font-weight-bold">2006-2008</span> Abschluss Bildende Kunst und Malerei, Al-Zahra College der Bildenden Kunst, Maschhad, Iran<br />

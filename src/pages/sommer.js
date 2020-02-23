@@ -27,7 +27,7 @@ const Heimat = () => {
                 <div className="text-frame col-lg-12">
                     <div className="row">
                         <div className="info col-lg-12">
-                            <p>Sommer 2015. 2015</p>
+                            <p>Sommer 2015.</p>
                             <p>Glas, Porzellan, Wasser. 100 x 50 x 40 cm</p>
                             <p>©Florian Wehking</p>
                         </div>

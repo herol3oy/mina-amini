@@ -9,6 +9,7 @@ $font-4: "Roboto Mono", monospace;
 
 .vita-text-paragraph {
   font-size: 1rem !important;
+  font-weight: normal !important;
 }
 
 .container-fluid {
@@ -36,25 +37,43 @@ body {
     font-family: $font-4;
     font-size: 2.5rem;
     color: #212529;
+    font-weight: 700;
   }
 
   .nav-link {
     font-family: $font-2;
-    color: #21252998;
+    color: rgba(0, 0, 0, 0.3);
+    transition: color ease-in-out 0.5s;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.7);
+    }
   }
 
   p {
     font-family: $font-3;
     line-height: 2rem;
     font-size: 1.4rem;
-    // margin: 3rem 0;
   }
 }
 
 .info {
   margin: 3rem 0;
+
   p {
     margin-top: 0rem;
     line-height: 1.5;
   }
+}
+
+p:first-child {
+  font-weight: 700;
+}
+
+p:nth-child(2n) {
+  font-size: 1.1rem;
+}
+
+p:nth-child(3n) {
+  font-size: 1.1rem;
 }

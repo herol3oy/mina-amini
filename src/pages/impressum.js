@@ -7,8 +7,8 @@ const Impressum = () => {
         <>
             <Header />
             <aside className="col-lg-6">
-                <h4 className="col-lg-4">Impressum</h4>
-                <p className="pl-3 vita-text-paragraph">
+                <h4 className="col-lg-4 font-weight-bold">Impressum</h4>
+                <p className="pl-3 vita-text-paragraph mt-5">
                     Mina Amini <br />
                     Friedenstraße 18, 34121 Kassel <br />
                     minaamini1988@gmail.com <br />

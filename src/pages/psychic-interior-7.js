@@ -17,37 +17,29 @@ const PsychicInterior = () => {
                     <div className="images col-lg-4">
                         <img src={PsychicInterior07} className="img-fluid mb-3 col-lg-12" alt="Fine art by Mina Amini" />
                         <div className="col-lg-12">
-                            <p>
-                                O.T. 2018 <br />
-                                Aquarell auf Papier. 24 x 17 cm
-                            </p>
+                            <p>O.T. 2018</p>
+                            <p>Aquarell auf Papier. 24 x 17 cm</p>
                         </div>
                     </div>
                     <div className="images col-lg-4">
                         <img src={PsychicInterior02} className="img-fluid mb-3 col-lg-12" alt="Fine art by Mina Amini" />
                         <div className="col-lg-12">
-                            <p>
-                                Puppi. 2018 <br />
-                                Aquarell auf Papier. 24 x 17 cm
-                            </p>
+                            <p>Puppi. 2018</p>
+                            <p>Aquarell auf Papier. 24 x 17 cm</p>
                         </div>
                     </div>
                     <div className="images col-lg-4">
                         <img src={PsychicInterior01} className="img-fluid mb-3 col-lg-12" alt="Fine art by Mina Amini" />
                         <div className="col-lg-12">
-                            <p>
-                                Mama Mina. 2018 <br />
-                                Aquarell auf Papier. 24 x 17 cm
-                            </p>
+                            <p>Mama Mina. 2018 </p>
+                            <p>Aquarell auf Papier. 24 x 17 cm</p>
                         </div>
                     </div>
                     <div className="images col-lg-6">
                         <img src={PsychicInterior05} className="img-fluid mb-3 col-lg-12" alt="Fine art by Mina Amini" />
                         <div className="col-lg-12">
-                            <p>
-                                Landschaft ihres Körpers. 2015 <br />
-                                Aquarell auf Papier. Je. 40 x 30 cm
-                            </p>
+                            <p>Landschaft ihres Körpers. 2015</p>
+                            <p>Aquarell auf Papier. Je. 40 x 30 cm</p>
                         </div>
                     </div>
                     <div className="images col-lg-6">
@@ -56,19 +48,15 @@ const PsychicInterior = () => {
                     <div className="images col-lg-6">
                         <img src={PsychicInterior03} className="img-fluid mb-3 col-lg-12" alt="Fine art by Mina Amini" />
                         <div className="col-lg-12">
-                            <p>
-                                O.T. 2018 <br />
-                                Öl auf Leinwand. 130 x 70 cm
-                            </p>
+                            <p>O.T. 2018</p>
+                            <p>Öl auf Leinwand. 130 x 70 cm</p>
                         </div>
                     </div>
                     <div className="images col-lg-6">
                         <img src={PsychicInterior06} className="img-fluid mb-3 col-lg-12" style={{ height: '96%' }} alt="Fine art by Mina Amini" />
                         <div className="col-lg-12">
-                            <p>
-                                Zwang der Geo. 2012 <br />
-                                Acryl auf Pappe. 70 x 50 cm
-                            </p>
+                            <p>Zwang der Geo. 2012</p>
+                            <p>Acryl auf Pappe. 70 x 50 cm  </p>
                         </div>
                     </div>
                 </div>

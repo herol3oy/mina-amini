@@ -1,3 +1,5 @@
+import Footer from '@/components/Footer'
+import TopBar from '@/components/TopBar'
 import type { Metadata } from 'next'
 import { Roboto_Mono } from 'next/font/google'
 import './globals.css'
@@ -19,7 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`px-12 ${roboto.className}`}>{children}</body>
+      <body className={`px-12 ${roboto.className}`}>
+        <TopBar />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

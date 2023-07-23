@@ -1,49 +1,61 @@
-import { ArtistPortfolio } from '../data'
 import Image from 'next/image'
+import { ArtistPortfolio } from '../data'
+import { getAllPortfolioData } from '@/utils/api'
 
 const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
-  const res = await fetch('http://localhost:3001/api/getAllPortfolios')
-  const { data: singlePortfolioItem }: { data: ArtistPortfolio[] } =
-    await res.json()
+  const { data: portfolioItems }: { data: ArtistPortfolio[] } =
+    await getAllPortfolioData()
 
-  const portfolioItem: ArtistPortfolio[] = singlePortfolioItem.filter(
+  const portfolioItem: ArtistPortfolio[] = portfolioItems.filter(
     (p) => params.slug === p.slug,
   )
 
+  const { images, title, content } = portfolioItem[0]
+
   return (
-    <div>
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-        {portfolioItem[0].images.map((image) =>
-          typeof image === 'string' ? (
-            <>
-              <Image
-                key={image}
-                src={image}
-                width={600}
-                height={400}
-                alt={image}
-                placeholder="empty"
-              />
-              <h1 className="text-4xl font-bold">{portfolioItem[0].title}</h1>
-              <p className="font-mono text-xl">{portfolioItem[0].content}</p>
-            </>
-          ) : (
-            <div key={image.url} className="flex flex-col gap-5">
-              <Image
-                src={image.url}
-                width={600}
-                height={400}
-                alt={image.title ? image.title : 'Mina Amini Portfolio'}
-                placeholder="empty"
-              />
-              <div>
-                <h1>{image.title}</h1>
-                <p>{image.descreption}</p>
+    <div className="flex flex-col gap-10">
+      <div
+        className={`mx-auto w-8/12 columns-1 gap-5 ${
+          images.length === 1 ? 'md:columns-1' : 'w-full md:columns-2'
+        }`}
+      >
+        {
+          <>
+            {images.map((image, index) => (
+              <div
+                className={`flex aspect-auto w-full flex-col items-center gap-5 text-start ${
+                  index === 0 ? 'mb-5' : 'my-5'
+                }`}
+                key={image.url}
+              >
+                <Image
+                  className="w-full"
+                  src={image.url}
+                  width={600}
+                  height={400}
+                  alt={image.title ? image.title : 'Mina Amini Portfolio'}
+                />
+                {(image.title || image.description) && (
+                  <div className="w-full text-start">
+                    <h1 className="text-2xl font-bold">{image.title}</h1>
+                    <p>{image.description}</p>
+                  </div>
+                )}
               </div>
-            </div>
-          ),
-        )}
+            ))}
+          </>
+        }
       </div>
+      {(title || content) && (
+        <div
+          className={`flex flex-col gap-3 ${
+            images.length === 1 ? 'text-center w-full' : 'text-start w-4/12'
+          }`}
+        >
+          <h1 className="text-lg font-bold md:text-2xl">{title}</h1>
+          <p>{content}</p>
+        </div>
+      )}
     </div>
   )
 }

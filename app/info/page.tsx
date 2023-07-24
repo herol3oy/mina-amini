@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { Image } from '@unpic/react'
 import Link from 'next/link'
 
 const MINA_PORTRAIT =
@@ -131,8 +131,15 @@ const Info = () => {
   return (
     <div className="flex flex-col gap-5">
       <section>
-
-        <Image className='2xl:w-4/12' src={MINA_PORTRAIT} width={800} height={600} alt="Mina Amini" />
+        <Image
+          className="2xl:w-4/12"
+          src={MINA_PORTRAIT}
+          width={800}
+          height={600}
+          alt="Mina Amini"
+          layout="fixed"
+          background="linear-gradient(90deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%)"
+        />
         <figcaption>
           <small>@Shabnam Qaderi</small>
         </figcaption>

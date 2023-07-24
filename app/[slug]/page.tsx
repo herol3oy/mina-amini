@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import { ArtistPortfolio } from '../data'
 import { getAllPortfolioData } from '@/utils/api'
+import { Image } from '@unpic/react'
+import { ArtistPortfolio } from '../data'
 
 const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
   const { data: portfolioItems }: { data: ArtistPortfolio[] } =
@@ -31,9 +31,9 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
                 <Image
                   className="w-full"
                   src={image.url}
-                  width={600}
-                  height={400}
                   alt={image.title ? image.title : 'Mina Amini Portfolio'}
+                  layout='fullWidth'
+                  background="linear-gradient(90deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%)"
                 />
                 {(image.title || image.description) && (
                   <div className="w-full text-start">
@@ -49,7 +49,7 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
       {(title || content) && (
         <div
           className={`flex flex-col gap-3 ${
-            images.length === 1 ? 'text-center w-full' : 'text-start w-4/12'
+            images.length === 1 ? 'w-full text-center' : 'w-4/12 text-start'
           }`}
         >
           <h1 className="text-lg font-bold md:text-2xl">{title}</h1>

@@ -8,20 +8,17 @@ const Home = async () => {
     await getAllPortfolioData()
 
   return (
-    <>
-    
-      <main className="columns-1 gap-5 md:columns-2 lg:columns-3">
-        {portfolioItems.map((portfolio: ArtistPortfolio) => (
-          <Link
-            className="my-2 aspect-auto w-full"
-            href={portfolio.slug}
-            key={portfolio.id}
-          >
-            <PortFolioCard portfolio={portfolio} />
-          </Link>
-        ))}
-      </main>
-    </>
+    <main className="columns-1 gap-5 md:columns-2 lg:columns-3">
+      {portfolioItems.map((portfolio: ArtistPortfolio) => (
+        <Link
+          className="my-2 aspect-auto w-full"
+          href={portfolio.slug}
+          key={portfolio.id}
+        >
+          <PortFolioCard portfolio={portfolio} />
+        </Link>
+      ))}
+    </main>
   )
 }
 

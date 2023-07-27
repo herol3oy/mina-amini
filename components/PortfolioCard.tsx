@@ -1,13 +1,14 @@
 import { ArtistPortfolio } from '@/app/data'
-import { Image } from '@unpic/react'
+import Image from 'next/image'
 
 const PortFolioCard = ({ portfolio }: { portfolio: ArtistPortfolio }) => (
   <Image
-    className="translate-hover mb-5 w-full gap-2 rounded-sm"
+    className="translate-hover mb-5 w-full gap-2 rounded-sm bg-gradient-to-r from-cyan-200 to-blue-200"
     src={portfolio.thumbnail}
     alt={portfolio.title}
-    layout='fullWidth'
-    background="linear-gradient(90deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%)"
+    width={0}
+    height={0}
+    sizes='100vw'
   />
 )
 export default PortFolioCard

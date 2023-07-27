@@ -1,12 +1,9 @@
-import { getAllPortfolioData } from '@/utils/api'
-import { Image } from '@unpic/react'
-import { ArtistPortfolio } from '../data'
+import { PortfolioItem } from '@/types/artist-portfolio'
+import Image from 'next/image'
+import { data } from '../data'
 
 const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
-  const { data: portfolioItems }: { data: ArtistPortfolio[] } =
-    await getAllPortfolioData()
-
-  const portfolioItem: ArtistPortfolio[] = portfolioItems.filter(
+  const portfolioItem: PortfolioItem[] = data.portfolioItems.filter(
     (p) => params.slug === p.slug,
   )
 
@@ -29,11 +26,12 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
                 key={image.url}
               >
                 <Image
-                  className="w-full"
+                  className="w-full bg-gradient-to-r from-cyan-200 to-blue-200"
                   src={image.url}
                   alt={image.title ? image.title : 'Mina Amini Portfolio'}
-                  layout='fullWidth'
-                  background="linear-gradient(90deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%)"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
                 />
                 {(image.title || image.description) && (
                   <div className="w-full text-start">

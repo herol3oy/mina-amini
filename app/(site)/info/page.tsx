@@ -1,6 +1,6 @@
 import { Image } from '@unpic/react'
 import Link from 'next/link'
-import { data } from '../data'
+import { data } from '../../data'
 
 const Info = () => {
   return (
